@@ -24,8 +24,11 @@ public class DesafioFibonacci {
 						 
 						correctInput = true;
 						
-						// Executing the function
-						System.out.println(fbLinear(N));
+						// Executing the Recursive function
+						System.out.println(fbRecursive(N));
+						
+						// Executing the linear function
+						//System.out.println(fbLinear(N));
 						
 					} else {
 						
@@ -49,14 +52,13 @@ public class DesafioFibonacci {
 	public static int fbRecursive(int N) {
 		
 		/*
-		   Recursive function that find receive a integer and positive number and shows your respective value in Fibonacci Sequence.
+		  * Recursive function that receive a integer and positive number and shows its respective value in Fibonacci Sequence.
 		   
-		   Working sample :  f(3) = f(3 - 1) + f (3 - 2)
+		  * Working sample :  f(3) = f(3 - 1) + f (3 - 2)
 		   					
 		   					= f(2) = 1 + 0
 		   					+ f(1) = 1	
 		   					= 1 + 0 + 1 = 2
-		   
 		*/
 		
 		if(N <= 1) {
@@ -75,8 +77,8 @@ public class DesafioFibonacci {
 	public static int fbLinear(int N) {
 		
 		/*
-		   Linear function that find receive a integer and positive number and shows your respective value in Fibonacci Sequence.
-		   Simulate the fibonacci sequence formation, where the next number is the sum of two previous numbers
+		  * Linear function that receive a integer and positive number and shows its respective value in Fibonacci Sequence.
+		  * Simulate the Fibonacci Sequence formation, where the next number is the sum of two previous numbers
 		*/
 		
 		int previous1 = 0;
@@ -85,7 +87,7 @@ public class DesafioFibonacci {
 		
 		if (N > 0) {
 			
-			for (int i = 2; i < N; i++) { // The count starts at fb = 1, then position 0 (with if) and position 1 was resolved
+			for (int i = 2; i < N; i++) { // The count starts at fb = 1, then position 0 (with if (N > 0)) and position 1 was resolved
 				
 				previous1 = previous2;
 				previous2 = fb;
@@ -101,7 +103,6 @@ public class DesafioFibonacci {
 			return 0;
 			
 		}
-		
 		
 		
 	}
